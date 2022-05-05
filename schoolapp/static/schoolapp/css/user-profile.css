@@ -1,0 +1,50 @@
+.main-header {
+    width: 100%;
+    height: 5rem;
+    font-family: "Poppins Medium", sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header h2 {
+    width: 95%;
+}
+
+
+.user-information {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-information > .inner {
+    width: 95%;
+    height: 95%;
+    display: flex;
+}
+
+.user-information-photo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-information-photo > img {
+    width: 70%;
+    background-color: white;
+}
+
+.user-information-table {
+    background-color: #ffffff;
+    width: 50%;
+    height: auto;
+}
+
+.user-information-table > table {
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+}

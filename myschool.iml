@@ -14,7 +14,10 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/myschool" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/schoolapp" isTestSource="false" />
+    </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (myschool)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

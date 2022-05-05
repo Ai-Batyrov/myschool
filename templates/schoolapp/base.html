@@ -1,0 +1,93 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="{% static 'schoolapp/img/myschool_favicon.svg' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Poppins&display=swap"
+          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'schoolapp/css/style.css' %}">
+    <title>{{ title }}</title>
+</head>
+<body>
+<header>
+    <div class="header-logo">
+        <div class="logo-div">
+            <img src="{% static 'schoolapp/img/myschool-logo.png' %}" alt="myschool-logo">
+        </div>
+        <div class="app-name">
+            <span>
+                MySchool
+            </span>
+        </div>
+    </div>
+    <div class="header-menu-div">
+        <div class="profile">
+            <span class="user-photo"
+                  style="background-image: url({{ student.photo.url }}"
+            >
+            </span>
+            <span class="user-name">
+                <div>
+                    <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+                    <p>Student</p>
+                </div>
+            </span>
+        </div>
+        <div class="header-menu">
+            <ul>
+                {% for title, url_name in header_menu.items %}
+                    <li>
+                        <a href=""
+                           class="header-menu-item  {% if request.resolver_match.url_name == url_name %}active{% endif %}">
+                            <span class="header-menu-item-icon">
+                                <img src="{% static 'schoolapp/img/menu-icons/' %}{{ title }}-icon.png" alt="menu-icon">
+                            </span>
+                            <span class="header-menu-item-title">
+                                {{ title }}
+                            </span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="header-footer">
+        Powered by Suleyman Demirel University 2022
+    </div>
+</header>
+<main>
+    <div class="main-top">
+        <div class="school-name">
+            <span>
+                {{ get_current_school }}
+            </span>
+        </div>
+        <div class="time-bar">
+            <span class="time-bar-icon">
+                <img src="{% static 'schoolapp/img/time-bar-icons/' %}{{ time_word }}.png" alt="time icon">
+            </span>
+            <div class="time-bar-right">
+                <div class="time-word">
+                    <h4>Good {{ time_word }}!</h4>
+                </div>
+                <div class="time-bar-time">
+                    <span>{{ datetime }}</span>
+                    <span>{{ current_day_name }}</span>
+                    <span>{{ current_time }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'schoolapp/base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'schoolapp/css/user-profile.css' %}">
+    <div class="content">
+        <div class="main-header">
+            <h2>Profile</h2>
+        </div>
+        <div class="user-information">
+            <div class="inner">
+                <span class="user-information-photo">
+{#                    {% for student in students %}#}
+{#                        {% if student.user_id == user.pk %}#}
+                            <img src="{{ student.photo.url }}" alt="user-photo">
+{#                        {% endif %}#}
+{#                    {% endfor %}#}
+                </span>
+                <span class="user-information-table">
+                    <table class="table table-hover table-bordered">
+                        {% include 'schoolapp/student-components/student-information-table.html' %}
+                    </table>
+            </span>
+            </div>
+        </div>
+    </div>
+{% endblock %}

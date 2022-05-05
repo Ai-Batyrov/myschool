@@ -1,0 +1,268 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header {
+    /*position: fixed;*/
+    width: 20%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins, sans-serif;
+    background-color: #283342;
+    color: white;
+}
+
+/*logo and app-name */
+.header-logo {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    background-color: #1D242E;
+}
+
+.header-logo > .logo-div {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-logo > .logo-div > img {
+    width: 2.5em;
+}
+
+.header-logo > .app-name {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    justify-content: flex-start;
+}
+
+.header-logo > .app-name > span {
+    width: 90%;
+    font-family: "Poppins Medium", sans-serif;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/*menu*/
+.header-menu-div {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*profile */
+.header-menu-div > .profile {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    margin: 0.8rem 0 0.8rem 0;
+}
+
+.header-menu-div > .profile > .user-photo {
+    width: 25%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.6rem;
+}
+
+.header-menu-div > .profile > .user-name {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-menu-div > .profile > .user-name > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+    height: 80%;
+}
+
+.header-menu-div > .profile > .user-name > div > h3, p {
+    margin: 0;
+}
+
+.header-menu-div > .profile > .user-name > div > h3 {
+    font-size: 1.2rem;
+}
+
+.header-menu-div > .profile > .user-name > div > p {
+    color: #FED600;
+}
+
+
+/*header-menu*/
+.header-menu {
+    width: 100%;
+    height: auto;
+}
+
+.header-menu > ul {
+    list-style: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.header-menu > ul > li {
+    width: 100%;
+    height: 4rem;
+}
+
+.header-menu-item {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white !important;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    background-color: #009099;
+}
+
+.active:hover {
+    background-color: #00cebd;
+}
+
+.header-menu-item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.header-menu-item-icon > img {
+    width: 1.5rem;
+}
+
+.header-menu-item-title {
+    width: 80%;
+}
+
+.header-menu-item:hover {
+    background-color: #009099;
+}
+
+.header-footer {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    background-color: #1D242E;
+}
+
+
+/*main-top*/
+main {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    background-color: #EDF1F5;
+}
+
+.main-top {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+.main-top > .school-name {
+    width: 70%;
+    height: 100%;
+    /*background-color: #e35f5f;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-top > .school-name > span {
+    width: 95%;
+    font-family: "Exo 2", sans-serif;
+    font-size: 1.6rem;
+}
+
+.main-top > .time-bar {
+    width: 30%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.time-bar-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 75%;
+    height: 95%;
+}
+
+.time-bar-right > .time-word {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+
+.time-bar-right > .time-word > h4 {
+    margin: 0;
+    padding: 0;
+}
+
+
+.time-bar-icon {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.time-bar-icon > img {
+    width: 3rem;
+}
+
+.time-bar-time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
